@@ -1,0 +1,43 @@
+.membership-desc{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 0 5rem 0;
+    .desc {
+        h1,h5,h6, ul li{
+            color: #212322
+        }
+        h6{
+            opacity: 80%;
+        }
+        h1,h5{
+            font-weight: bolder;
+        }
+    }
+
+    .desc-img img{
+        border-radius: 5%;
+    }
+}
+
+.training-schedule{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0 0 0;
+    h1,h5{
+        color: #212322;
+    }
+    
+    h1{
+        position: relative;
+        right: 15%;
+        font-weight: bold;
+    }
+
+    h5{
+        position: relative;
+        right: 2%
+    }
+}

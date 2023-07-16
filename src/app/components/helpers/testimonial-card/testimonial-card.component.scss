@@ -1,0 +1,28 @@
+p{
+    font-weight: bolder;
+    color: #212322;
+}
+h5{
+    font-style: italic;
+    font-weight: bolder;
+    color: #212322;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 15%;
+    padding: 3rem 1rem 3rem 1rem;
+    text-align: center;
+    background-color: #fff;
+    opacity: 80%;
+    border-radius: 10%;
+    
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
