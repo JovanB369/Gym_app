@@ -41,3 +41,29 @@
         right: 2%
     }
 }
+
+@media (min-width: 576px) and (max-width: 991px){
+    .membership-desc{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .training-schedule{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 90%;
+        }
+         h1,h5{
+            right: 0;
+            
+        }
+
+        h5{
+            width: 80%;
+        }
+    }
+}
