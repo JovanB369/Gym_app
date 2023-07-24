@@ -1,0 +1,23 @@
+.profile-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+
+.profile-sub-group{
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+}
+
+span{
+    background-color: #EB404A;
+    font-weight: 700;
+    border-radius: 10%;
+}
+
+
+
+   

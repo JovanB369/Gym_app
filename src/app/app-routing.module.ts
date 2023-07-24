@@ -6,7 +6,13 @@ const routes: Routes = [
                         import('./components/pages/pages.module')
                         .then(pm => pm.PagesModule) },
 
+  {path: '',loadChildren:()=>
+                              import('./components/admin/admin.module')
+                              .then(am=>am.AdminModule)
+}
+
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -5,21 +5,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { HelpersModule } from './components/helpers/helpers.module';
-import { GoogleMapsModule } from '@angular/google-maps';
-import { MembershipComponent } from './components/pages/membership/membership.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MembershipComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HelpersModule,
     HttpClientModule,
-    GoogleMapsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

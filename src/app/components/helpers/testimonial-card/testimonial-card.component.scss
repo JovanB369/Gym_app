@@ -1,18 +1,18 @@
 p{
-    font-weight: bolder;
+    font-style: italic;
     color: #212322;
 }
 h5{
-    font-style: italic;
-    font-weight: bolder;
     color: #212322;
+    font-weight: bold;
 }
 
 .card{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 15%;
+    width: 15rem;
+    height: 15rem;
     padding: 3rem 1rem 3rem 1rem;
     text-align: center;
     background-color: #fff;
@@ -23,15 +23,20 @@ h5{
 .card-container{
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    gap: 3rem;
 }
 
-@media (min-width: 576px) and (max-width: 1200px){
+:host ::ng-deep {
+    .carousel-control {
+        display: none;
+     }
+}
+
+@media (min-width: 359px) and (max-width: 1200px){
     .card{
         display:flex;
-        flex-direction: column;
         align-items: center;
-        width: 50%;
+
     }
 
     .card-container{

@@ -1,0 +1,53 @@
+<div class="sign-up-form">
+    <h1>{{h1Text}}</h1>
+
+    <form>
+        <div class="two-labels">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" class="form-control" placeholder="Enter your First Name">
+            </div>
+    
+    
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" class="form-control" placeholder="Enter your Password">
+            </div>
+        </div>
+        
+
+        <div class="form-group">
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" class="form-control" placeholder="Enter your Birthday">
+        </div>
+        <div class="two-labels">
+            <div class="form-group">
+                <label for="adress">Adress</label>
+                <input type="text" id="adress" class="form-control" placeholder="Enter your Adress">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="emial" class="form-control" placeholder="Enter your Email">
+            </div>
+        </div>
+        
+
+        <div class="form-group">
+            <label for="phone-number">Phone Number</label>
+            <input type="number" id="phone-number" class="form-control" placeholder="Enter your Phone Number">
+        </div>
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" class="form-control" placeholder="Enter your Username">
+        </div>
+
+        
+        <div class="form-group" [class.displayNone]="check">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Enter your Password">
+        </div>
+
+       <button type="submit" class="btn btn-red">{{buttonText}}</button>
+    </form>

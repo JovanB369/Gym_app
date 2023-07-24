@@ -1,8 +1,15 @@
 .membership-desc{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 1.5rem;
-    padding: 3rem 0 5rem 0;
+    align-items: center;
+    padding: 0 0 2rem 0;
+    .wrap{
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 3rem 0 5rem 0;
+    }
     .desc {
         h1,h5,h6, ul li{
             color: #212322
@@ -10,13 +17,19 @@
         h6{
             opacity: 80%;
         }
-        h1,h5{
+        h1,h2,h5{
             font-weight: bolder;
         }
     }
 
     .desc-img img{
         border-radius: 5%;
+    }
+
+    .other-packages{
+        width: 80%;
+        display: flex;
+        gap: 3rem;
     }
 }
 
@@ -25,7 +38,22 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 0 0 0;
+    padding: 3rem 0 3rem 0;
+    .wrap{
+        display: flex;
+        gap: 7rem;
+        .left,.right{
+            padding: 1rem;
+            border: 1px solid #212322;
+            border-radius: 5%;
+        };
+        h5,h6{
+            font-weight: bolder;
+        }
+        li{
+            font-style: italic;
+        }
+    }
     h1,h5{
         color: #212322;
     }
@@ -42,20 +70,44 @@
     }
 }
 
-@media (min-width: 576px) and (max-width: 991px){
+@media (min-width: 359px) and (max-width: 991px){
     .membership-desc{
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
+        padding:1rem 0 2rem 0;
+        .desc{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .desc-img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 90%;
+            }
+        }
     }
 
     .training-schedule{
         display: flex;
         align-items: center;
         justify-content: center;
-        img{
-            width: 90%;
+        padding: 1rem 0 0 0;
+        gap: 1rem;
+        .wrap{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            gap: 2rem;
+            .left,.right{
+                gap: 1rem;
+            }
         }
          h1,h5{
             right: 0;
@@ -63,7 +115,7 @@
         }
 
         h5{
-            width: 80%;
+            width: 90%;
         }
     }
 }

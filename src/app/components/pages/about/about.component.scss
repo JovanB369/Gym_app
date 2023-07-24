@@ -3,7 +3,7 @@
     align-items: stretch;
     justify-content: center;
     gap: 1.5rem;
-    padding: 1rem 0 3rem 0;
+    padding: 3rem 0 12rem 0;
     .left{
         width: 20%;
         
@@ -22,7 +22,7 @@
     align-items: stretch;
     justify-content: center;
     gap: 1.5rem;
-    padding: 3rem 0 3rem 0;
+    padding: 5rem 0 5rem 0;
     background-color: #EB404A;
     .right{
         display: flex;
@@ -44,7 +44,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    padding: 3rem 0 0 0;
+    padding: 5rem 0 1rem 0;
     
     .coach{
         display: flex;
@@ -66,15 +66,16 @@
     }
 }
 
-@media (min-width: 576px) and (max-width: 991px){
+@media (min-width: 359px) and (max-width: 991px){
     .how-it-works{
+        padding: 1rem 0 7rem 0;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         .left{
-            width: 70%;
+            width: 80%;
             text-align: center;
-            h1,h2,p{
+            h2,p{
                 font-weight: normal;
             }
         }
@@ -83,7 +84,7 @@
             justify-content: center;
             width: 90vw;
             img{
-            width: 80%;
+            width: 100%;
             }
         }
     }
@@ -99,16 +100,16 @@
             justify-content: center;
             width: 90vw;
             img{
-                width: 80%;
+                width: 100%;
             }
         }
         .right{
-            width: 70%;
+            width: 80%;
             text-align: center;
             margin-left: 0;
             margin-top: 1rem;
-
-            h1,h2,p{
+            gap: 0;
+            h2,p{
                 font-weight: normal;
             }
         }
@@ -118,7 +119,7 @@
         display: flex;
         justify-content: center;
         .coach{
-            width: 80%;
+            width: 90%;
             display: flex;
             flex-direction: column;
         }
