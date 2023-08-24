@@ -15,9 +15,15 @@
         border-radius: 5%;
         width: 100%;
     }
-    .left h2,h1,p{
+    .left{
         color: #fff;
-        font-weight: 900;
+        h1{
+            font-weight: 900;
+            font-size: 50px;
+        }
+        h2,p{
+            font-weight: 400;
+        }
      }
 
     .btn-red{
@@ -92,6 +98,9 @@
     .left{
         width: 80%;
         text-align: center;
+        h1{
+            font-size: 30px;
+        }
     }
     .right{
         display: flex;

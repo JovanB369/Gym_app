@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Member } from 'src/app/models/Member';
+import { Component, Host, OnInit } from '@angular/core';
+import { User } from 'src/app/models/User';
 import { MemberService } from 'src/app/services/member.service';
+
 
 
 @Component({
@@ -10,14 +11,23 @@ import { MemberService } from 'src/app/services/member.service';
 })
 export class AllMembersComponent implements OnInit {
 
-  members: Member[];
+  users: User[];
+  user:User;
 
   constructor(private memberService: MemberService){}
 
   ngOnInit(): void {
-    this.memberService.getAllMembers().subscribe(data =>{
-      this.members = data
+    this.memberService.getAllUsers().subscribe(data =>{
+      this.users = data
     })
   }
 
-}
+  deleteUser(id:number){
+    if (confirm("Are you sure?")) {
+      this.memberService.deleteUser(id).subscribe()
+      window.location.href = '/all-members'
+      }
+    }
+  }
+
+

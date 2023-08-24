@@ -7,6 +7,7 @@ import { AllMembersComponent } from './all-members/all-members.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HelpersModule } from '../helpers/helpers.module';
 import { ViewEditComponent } from './view-edit/view-edit.component';
+import { AddNewMemberComponent } from './add-new-member/add-new-member.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ViewEditComponent } from './view-edit/view-edit.component';
     MemberProfileComponent,
     AllMembersComponent,
     DashboardComponent,
-    ViewEditComponent
+    ViewEditComponent,
+    AddNewMemberComponent
   ],
   imports: [
     CommonModule,

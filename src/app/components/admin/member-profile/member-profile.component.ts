@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Member } from 'src/app/models/Member';
+import { User } from 'src/app/models/User';
 import { MemberService } from 'src/app/services/member.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { MemberService } from 'src/app/services/member.service';
 })
 export class MemberProfileComponent implements OnInit {
 
-  member:Member = new Member();
+  user: User = new User();
 
   check:boolean = false;
 
@@ -19,9 +20,9 @@ export class MemberProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.aRoute.params.subscribe(paramsData =>{
-      let memberID: number = paramsData['id'];
-      this.mService.getMemberByID(memberID).subscribe(data =>{
-        this.member = data;
+      let userID: number = paramsData['id'];
+      this.mService.getUserByID(userID).subscribe(data =>{
+        this.user = data;
       })
     })
   }

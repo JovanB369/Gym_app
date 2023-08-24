@@ -10,23 +10,25 @@
           <th scope="col">Birthday</th>
           <th scope="col">Adress</th>
           <th scope="col">Email</th>
+          <th scope="col">Role</th>
           <th scope="col">Phone Number</th>
-          <th scope="col">View/Add/Edit</th>
+          <th scope="col">View/Edit/Delete</th>
         </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let m of members">
-            <th scope="row">{{m.id}}</th>
-            <td>{{m.firstName}}</td>
-            <td>{{m.lastName}}</td>
-            <td>{{m.birthDate}}</td>
-            <td>{{m.adress}}</td>
-            <td>{{m.email}}</td>
-            <td>{{m.phoneNumber}}</td>
+          <tr *ngFor="let u of users">
+            <th scope="row">{{u.id}}</th>
+            <td>{{u.firstName}}</td>
+            <td>{{u.lastName}}</td>
+            <td>{{u.birthDate}}</td>
+            <td>{{u.adress}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.roles}}</td>
+            <td>{{u.phoneNumber}}</td>
             <td class="buttons">
-              <button type="button" class="btn btn-primary"><a routerLink="member-profile/{{m.id}}" class="text-white" style="text-decoration: none;" >View</a> </button>
-              <button type="button" class="btn btn-success">Edit</button>
-              <button type="button" class="btn btn-danger">Delete</button>
+              <button type="button" class="btn btn-primary"><a routerLink="member-profile/{{u.id}}" class="text-white" style="text-decoration: none;" >View</a> </button>
+              <button type="button" class="btn btn-success"><a routerLink="view-edit/{{u.id}}" class="text-white" style="text-decoration: none;" >Edit</a></button>
+              <button type="button" class="btn btn-danger" (click)="deleteUser(u.id)">Delete</button>
           </td>
         </tbody>
       </table>

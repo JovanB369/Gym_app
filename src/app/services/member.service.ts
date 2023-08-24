@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Member } from '../models/Member';
 import { environment } from 'src/environments/environment';
+import { User } from '../models/User';
 
 @Injectable({
   providedIn: 'root'
@@ -11,24 +11,24 @@ export class MemberService {
   apiUrl = environment.API_URL
 
   constructor(private http: HttpClient) { }
-  getAllMembers() {
-    return this.http.get<Member[]>(`${this.apiUrl}/member`);
+  getAllUsers() {
+    return this.http.get<User[]>(`${this.apiUrl}/user`);
   }
 
-  getMemberByID(id: number){
-    return this.http.get<Member>(`${this.apiUrl}/member/${id}`); 
+  getUserByID(id: number){
+    return this.http.get<User>(`${this.apiUrl}/user/${id}`); 
   }
 
-  insertMember(member: Member) {
-    return this.http.post(`${this.apiUrl}/member`, member);
+  insertUserDataManually(user: User) {
+    return this.http.post(`${this.apiUrl}/user`, user);
   }
 
-  updateMember(member:Member) {
-    return this.http.put(`${this.apiUrl}/member/${member.id}`, member); 
+  updateUserData(user: User) {
+    return this.http.put(`${this.apiUrl}/user/${user.id}`, user); 
   }
 
-  deleteMember(id: number){
-    return this.http.delete(`${this.apiUrl}/member/${id}`); 
+  deleteUser(id: number){
+    return this.http.delete(`${this.apiUrl}/user/${id}`); 
   }
 
 

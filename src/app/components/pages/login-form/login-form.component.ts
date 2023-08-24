@@ -10,6 +10,6 @@ import { User } from 'src/app/models/User';
 export class LoginFormComponent {
  
   h1Text:string = 'Login'
-  buttonText:string = 'Login'
+  forEdit:boolean = true;
   
 }

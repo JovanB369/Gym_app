@@ -1,4 +1,4 @@
-<nav  data-aos="fade-down" data-aos-duration="1000" class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="/">
       <img class="logo" src="../../../../assets/img/logo.png" alt="logo">
@@ -18,16 +18,28 @@
           <a class="nav-link" routerLink="/membership">Membership</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/dashboard" >Admin</a>
+          <a class="nav-link" routerLink="/dashboard" *ngIf="isAdmin">Admin</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/schedule-workout">Schedule Workout</a>
         </li>
       
+        
       </ul>
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0"  *ngIf="!isLoggedIn">
         <li class="nav-item">
           <a class="nav-link" routerLink="/login"><button type="button" class="btn btn-outline me-3">Login</button></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/sign-up"> <button type="button" class="btn btn-red">Sign-up</button></a>
+          <a class="nav-link" routerLink="/register"> <button type="button" class="btn btn-red">Sign-up</button></a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0" *ngIf="isLoggedIn">
+        <li class="nav-item">  Welcome Back {{username}}</li>
+        <li class="nav-item">
+          <a class="nav-link"> <button type="button" class="btn btn-red" (click)="logout()">Logout</button></a>
         </li>
       </ul>
     </div>

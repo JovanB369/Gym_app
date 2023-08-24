@@ -5,49 +5,58 @@
         <div class="two-labels">
             <div class="form-group">
                 <label for="first-name">First Name</label>
-                <input type="text" id="first-name" class="form-control" placeholder="Enter your First Name">
+                <input type="text" id="first-name" class="form-control" placeholder="Enter your First Name" [(ngModel)]="user.firstName" name="first">
             </div>
     
     
             <div class="form-group">
                 <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" class="form-control" placeholder="Enter your Password">
+                <input type="text" id="last-name" class="form-control" placeholder="Enter your Password" [(ngModel)]="user.lastName" name="last">
             </div>
         </div>
         
 
         <div class="form-group">
             <label for="birthday">Birthday</label>
-            <input type="date" id="birthday" class="form-control" placeholder="Enter your Birthday">
+            <input type="date" id="birthday" class="form-control" placeholder="Enter your Birthday" [(ngModel)]="user.birthDate" name="birthday">
         </div>
         <div class="two-labels">
             <div class="form-group">
                 <label for="adress">Adress</label>
-                <input type="text" id="adress" class="form-control" placeholder="Enter your Adress">
+                <input type="text" id="adress" class="form-control" placeholder="Enter your Adress" [(ngModel)]="user.adress" name="adress">
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="emial" class="form-control" placeholder="Enter your Email">
+                <input type="email" id="emial" class="form-control" placeholder="Enter your Email" [(ngModel)]="user.email" name="email">
             </div>
         </div>
         
+        <select class="form-select" aria-label="Default select example"  [(ngModel)]="user.roles" name="role">
+            <option selected>Select Package</option>
+            <option>1xWeek</option>
+            <option>2xWeek</option>
+            <option>3xWeek</option>
+            <option *ngIf="isLogged">Trainer</option>
+          </select>
 
         <div class="form-group">
             <label for="phone-number">Phone Number</label>
-            <input type="number" id="phone-number" class="form-control" placeholder="Enter your Phone Number">
+            <input type="number" id="phone-number" class="form-control" placeholder="Enter your Phone Number" [(ngModel)]="user.phoneNumber" name="phone">
         </div>
 
         <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" id="username" class="form-control" placeholder="Enter your Username">
+            <input type="text" id="username" class="form-control" placeholder="Enter your Username" [(ngModel)]="user.username" name="username">
         </div>
 
         
         <div class="form-group" [class.displayNone]="check">
             <label for="password">Password</label>
-            <input type="password" id="password" class="form-control" placeholder="Enter your Password">
+            <input type="password" id="password" class="form-control" placeholder="Enter your Password" [(ngModel)]="user.hashedPassword" name="password">
         </div>
 
-       <button type="submit" class="btn btn-red">{{buttonText}}</button>
+       <button type="submit" class="btn btn-red" [class.edit]="forEdit" (click)="saveEdit()">Edit</button>
+       <button type="submit" class="btn btn-red" [class.register]="forRegister" (click)="register()">Sign-Up</button>
+       <button type="submit" class="btn btn-red" [class.insert]="forInsert" (click)="addNewMember()">Add New Member</button>
     </form>

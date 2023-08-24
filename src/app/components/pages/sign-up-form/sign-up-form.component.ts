@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
 })
 export class SignUpFormComponent {
   h1Text:string = 'Sign-Up';
-  buttonText:string = 'Become a Member!'
+  forEdit:boolean = true;
+  forInsert: boolean = true;
 }

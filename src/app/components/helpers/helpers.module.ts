@@ -10,7 +10,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { LogUserFormComponent } from './log-user-form/log-user-form.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,13 +19,16 @@ import { LogUserFormComponent } from './log-user-form/log-user-form.component';
     TestimonialCardComponent,
     ProfileComponent,
     RegisterFormComponent,
-    LogUserFormComponent
+    LogUserFormComponent,
   ],
   imports: [
     CommonModule,
     HelpersRoutingModule,
     RouterModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    FormsModule,
+
+    
   ],
   exports:[
     HeaderComponent,
@@ -33,7 +36,7 @@ import { LogUserFormComponent } from './log-user-form/log-user-form.component';
     TestimonialCardComponent,
     ProfileComponent,
     RegisterFormComponent,
-    LogUserFormComponent
+    LogUserFormComponent,
     
   ]
 })

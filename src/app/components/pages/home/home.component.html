@@ -7,7 +7,7 @@
             <h1>The Most Effective Strength Training Program in Existence</h1>
             <p>Results are Guaranteed.</p>
         
-           <a routerLink="/sign-up"> <button type="button" class="btn btn-red">Join Us Today!</button></a>
+           <a routerLink="/register" *ngIf="!isLogged"> <button type="button" class="btn btn-red">Join Us Today!</button></a>
         </div>
 
         <div class="right">

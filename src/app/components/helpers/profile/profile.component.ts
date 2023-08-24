@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Member } from 'src/app/models/Member';
+import { User } from 'src/app/models/User';
 
 @Component({
   selector: 'app-profile',
@@ -8,5 +9,5 @@ import { Member } from 'src/app/models/Member';
 })
 export class ProfileComponent {
 
-  @Input() member:Member = new Member();
+  @Input() user: User = new User();
 }

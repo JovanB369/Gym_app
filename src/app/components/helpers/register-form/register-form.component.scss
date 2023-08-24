@@ -10,7 +10,7 @@
         flex-direction: column;
         gap: 1rem;
     }
-    input{
+    input,select{
         border: 1px solid #212322;
     }
     .two-labels{
@@ -27,5 +27,17 @@
 }
 
 .displayNone{
+    display: none;
+}
+
+.edit{
+    display: none;
+}
+
+.register{
+    display: none;
+}
+
+.insert{
     display: none;
 }
